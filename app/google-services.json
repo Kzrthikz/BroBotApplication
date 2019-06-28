@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "855852356258",
+    "firebase_url": "https://brobotapp-5aef6.firebaseio.com",
+    "project_id": "brobotapp-5aef6",
+    "storage_bucket": "brobotapp-5aef6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855852356258:android:afc975c10ef66b9a",
+        "android_client_info": {
+          "package_name": "com.example.brobotapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855852356258-vk5u1p6f9t0tl6pujfckv7il982v8iq0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.brobotapp",
+            "certificate_hash": "ffe8a079354441bee65bc9833c1b5e5972ab726f"
+          }
+        },
+        {
+          "client_id": "855852356258-calkbqef47ou37ein67uknjhelsb9ekm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-R8fyyMjAyw053ReH4sjuLOQ4ItfFVFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855852356258-calkbqef47ou37ein67uknjhelsb9ekm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
