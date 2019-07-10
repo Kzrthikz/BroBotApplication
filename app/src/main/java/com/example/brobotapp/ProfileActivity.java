@@ -7,10 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.applozic.mobicommons.commons.core.utils.Utils;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import io.kommunicate.KmChatBuilder;
+import io.kommunicate.Kommunicate;
+import io.kommunicate.callbacks.KmCallback;
+
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String APP_ID = "3cb2ef8fe32b5a1e6ea390c04a81822";
 
     //firebase auth object
     private FirebaseAuth firebaseAuth;
@@ -49,18 +56,30 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         //adding listener to button
         buttonLogout.setOnClickListener(this);
+        Kommunicate.init(this, "3cb2ef8fe32b5a1e6ea390c04a81822");
     }
 
     @Override
     public void onClick(View view) {
         //if logout is pressed
-        if (view == buttonLogout) {
+/*        if (view == buttonLogout) {
             //logging out the user
             firebaseAuth.signOut();
             //closing activity
             finish();
             //starting login activity
             startActivity(new Intent(this, LoginActivity.class));
-        }
+        }*/
+        new KmChatBuilder(this).launchChat(new KmCallback() {
+            @Override
+            public void onSuccess(Object message) {
+                Utils.printLog(ProfileActivity.this, "ChatTest", "Success : " + message);
+            }
+
+            @Override
+            public void onFailure(Object error) {
+                Utils.printLog(ProfileActivity.this, "ChatTest", "Failure : " + error);
+            }
+        });
     }
 }
