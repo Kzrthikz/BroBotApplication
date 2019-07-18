@@ -50,7 +50,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         //initializing views
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
         buttonLogout = (Button) findViewById(R.id.buttonLogout);
-        //buttonChatbot = (Button) findViewById(R.id.buttonChatbot);
 
         //displaying logged in user name
         textViewUserEmail.setText("Welcome " + user.getEmail());
@@ -71,7 +70,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             //starting login activity
             startActivity(new Intent(this, LoginActivity.class));
         }
-        /*new KmChatBuilder(this).launchChat(new KmCallback() {
+        new KmChatBuilder(this).launchChat(new KmCallback() {
             @Override
             public void onSuccess(Object message) {
                 Utils.printLog(ProfileActivity.this, "ChatTest", "Success : " + message);
@@ -81,7 +80,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             public void onFailure(Object error) {
                 Utils.printLog(ProfileActivity.this, "ChatTest", "Failure : " + error);
             }
-        });*/
+        });
     }
 
 
