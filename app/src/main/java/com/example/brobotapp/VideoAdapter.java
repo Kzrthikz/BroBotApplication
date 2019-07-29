@@ -1,5 +1,5 @@
 package com.example.brobotapp;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +47,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         public VideoViewHolder(View itemView) {
             super(itemView);
 
-            videoWeb = (WebView) itemView.findViewById(R.id.videoWebView);
+            videoWeb = itemView.findViewById(R.id.videoWebView);
 
             videoWeb.getSettings().setJavaScriptEnabled(true);
             videoWeb.setWebChromeClient(new WebChromeClient() {

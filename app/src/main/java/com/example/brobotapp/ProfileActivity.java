@@ -1,8 +1,8 @@
 package com.example.brobotapp;
 
 import android.content.Intent;
-import android.media.Image;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +19,7 @@ import io.kommunicate.callbacks.KmCallback;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String APP_ID = "3cb2ef8fe32b5a1e6ea390c04a81822";
+    private static final String APP_ID = "355773f7e7bed152103f2ef19cda9df47";
 
     //firebase auth object
     private FirebaseAuth firebaseAuth;
@@ -53,11 +53,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         //initializing views
-        textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
-        buttonLogout = (Button) findViewById(R.id.buttonLogout);
-        chatbot = (ImageView) findViewById(R.id.chatbot) ;
-        relaxationStrategies = (ImageView) findViewById(R.id.relaxtionStrategies);
-        todo = (ImageView) findViewById(R.id.todo);
+        textViewUserEmail = findViewById(R.id.textViewUserEmail);
+        buttonLogout = findViewById(R.id.buttonLogout);
+        chatbot = findViewById(R.id.chatbot);
+        relaxationStrategies = findViewById(R.id.relaxtionStrategies);
+        todo = findViewById(R.id.todo);
 
         //displaying logged in user name
         textViewUserEmail.setText("Welcome " + user.getEmail());
@@ -67,7 +67,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         chatbot.setOnClickListener(this);
         relaxationStrategies.setOnClickListener(this);
         todo.setOnClickListener(this);
-        Kommunicate.init(this, "3cb2ef8fe32b5a1e6ea390c04a81822");
+        Kommunicate.init(this, "355773f7e7bed152103f2ef19cda9df47");
     }
 
     @Override

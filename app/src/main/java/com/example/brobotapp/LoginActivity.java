@@ -2,8 +2,8 @@ package com.example.brobotapp;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -52,11 +52,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
         //initializing views
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        buttonSignIn = (Button) findViewById(R.id.buttonSignin);
-        textViewSignup  = (TextView) findViewById(R.id.textViewSignUp);
-        forgotPassword = (TextView)findViewById(R.id.forgotPassword);;
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        buttonSignIn = findViewById(R.id.buttonSignin);
+        textViewSignup  = findViewById(R.id.textViewSignUp);
+        forgotPassword = findViewById(R.id.forgotPassword);
 
         progressDialog = new ProgressDialog(this);
 

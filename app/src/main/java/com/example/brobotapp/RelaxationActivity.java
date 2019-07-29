@@ -1,7 +1,7 @@
 package com.example.brobotapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,9 +17,9 @@ public class RelaxationActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_relaxation);
 
-        meditation = (ImageView) findViewById(R.id.meditation);
-        breathingEx = (ImageView) findViewById(R.id.breathingEx);
-        music = (ImageView) findViewById(R.id.music);
+        meditation = findViewById(R.id.meditation);
+        breathingEx = findViewById(R.id.breathingEx);
+        music = findViewById(R.id.music);
 
         meditation.setOnClickListener(this);
         breathingEx.setOnClickListener(this);
